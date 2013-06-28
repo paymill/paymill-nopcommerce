@@ -1,0 +1,8 @@
+﻿Group: Payment methods
+FriendlyName: Credit Card (P)
+SystemName: Payments.PayMill
+Version: 1.0
+SupportedVersions: 3.00
+Author: Jeff Turner
+DisplayOrder: 1
+FileName: Nop.Plugin.Payments.PayMill.dll

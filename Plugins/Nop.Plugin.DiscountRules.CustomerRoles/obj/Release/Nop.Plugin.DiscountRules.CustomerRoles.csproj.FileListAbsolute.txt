@@ -1,0 +1,4 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Nop.Plugin.DiscountRules.CustomerRoles.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\Nop.Plugin.DiscountRules.CustomerRoles.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\Nop.Plugin.DiscountRules.CustomerRoles.csprojResolveAssemblyReference.cache

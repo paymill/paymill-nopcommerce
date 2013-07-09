@@ -1,0 +1,3 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Shipping.USPS\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plugin.Shipping.USPS.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Shipping.USPS\obj\Release\Nop.Plugin.Shipping.USPS.dll

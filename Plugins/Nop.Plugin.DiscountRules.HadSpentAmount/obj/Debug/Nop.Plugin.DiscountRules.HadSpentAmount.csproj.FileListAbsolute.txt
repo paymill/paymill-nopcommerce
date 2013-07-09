@@ -1,0 +1,5 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.pdb
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.pdb

@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.PayMill.Models.PaymentInfoModel
+@using Nop.Web.Framework;
+
+<script type="text/javascript">
+    var PAYMILL_PUBLIC_KEY = '@ViewBag.publickey';
+    </script>
+    <script type="text/javascript" src="https://bridge.paymill.de/"></script>
+
+<table width="100%" cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            @Html.NopLabelFor(model => model.CreditCardTypes, false):
+        </td>
+        <td>
+            @Html.DropDownListFor(model => model.CreditCardType, Model.CreditCardTypes, new { @class = "dropdownlists" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.NopLabelFor(model => model.CardholderName, false):
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.CardholderName, new { style = "Width: 165px;", autocomplete = "off", @class="card-holdername" })
+            @Html.ValidationMessageFor(model => model.CardholderName)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.NopLabelFor(model => model.CardNumber, false):
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.CardNumber, new { style = "Width: 165px;", autocomplete = "off", maxlength = 22, @class="card-number"})
+            @Html.ValidationMessageFor(model => model.CardNumber)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.NopLabelFor(model => model.ExpireMonth, false):
+        </td>
+        <td>
+            @Html.DropDownListFor(model => model.ExpireMonth, Model.ExpireMonths, new { @class="card-expiry-month"})
+            /
+            @Html.DropDownListFor(model => model.ExpireYear, Model.ExpireYears, new { @class="card-expiry-year"})
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.NopLabelFor(model => model.CardCode, false):
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.CardCode, new { style = "Width: 60px;", autocomplete = "off", maxlength = 4, @class="card-cvc" })
+            @Html.ValidationMessageFor(model => model.CardCode)
+        </td>
+    </tr>
+</table>
+<input type="hidden" name="amount" class="amount" value="@ViewBag.amount" />
+<input type="hidden" name="currency" class="currency" value="@ViewBag.currency" />
+<input type="hidden" name="nextstep" id="nextstep" value="true" />
+<input type="hidden" name="paymenttoken" id="paymenttoken" />
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(".payment-info-next-step-button").removeAttr("onClick");
+            function PaymillResponseHandler(error, result) {
+                if (error) {
+                    // Zeigt den Fehler überhalb des Formulars an
+                    $(".payment-errors").text('error.apierror');
+                } else {
+                    $(".payment-errors").text("");
+                    var form = $(".payment-info-next-step-button").closest('form');
+
+                    // Token
+                    var token = result.token;
+
+                    // Token in das Formular einfügen damit es an den Server übergeben wird
+                    $("#paymenttoken").val(token);
+                    if (document.location.href.indexOf('onepagecheckout') > -1) {
+                        var url = 
+                        PaymentInfo.init('#co-payment-info-form', '@Request.Url.GetLeftPart(UriPartial.Authority)/checkout/OpcSavePaymentInfo/');
+                        PaymentInfo.save();
+                    }
+                    else {
+                        form.get(0).submit();
+                    }
+                }
+                $(".payment-info-next-step-button").removeAttr("disabled");
+            }
+
+            $(".payment-info-next-step-button").click(function (event) {
+                // Absenden Button deaktivieren um weitere Klicks zu vermeiden
+                $('.submit-button').attr("disabled", "disabled");
+
+                if (false == paymill.validateCardNumber($('.card-number').val())) {
+                    $(".payment-errors").text('@T("PaymentInfo.InvalidCard")');
+                    $(".payment-info-next-step-button").removeAttr("disabled");
+                    return false;
+                }
+
+                if (false == paymill.validateExpiry($('.card-expiry-month').val(), $('.card-expiry-year').val())) {
+                    $(".payment-errors").text('@T("PaymentInfo.ExpiredCard")');
+                    $(".payment-info-next-step-button").removeAttr("disabled");
+                    return false;
+                }
+
+                paymill.createToken({
+                    number: $('.card-number').val(),
+                    exp_month: $('.card-expiry-month').val(),
+                    exp_year: $('.card-expiry-year').val(),
+                    cvc: $('.card-cvc').val(),
+                    cardholdername: $('.card-holdername').val(),
+                    amount_int: $('.amount').val(),
+                    currency: $('.currency').val()
+                }, PaymillResponseHandler);
+
+                return false;
+            });
+        });
+
+    </script>
+<div class="payment-errors"></div>

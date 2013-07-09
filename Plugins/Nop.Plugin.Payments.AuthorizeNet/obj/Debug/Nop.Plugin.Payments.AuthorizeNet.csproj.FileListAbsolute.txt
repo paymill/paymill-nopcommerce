@@ -1,0 +1,7 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Nop.Plugin.Payments.AuthorizeNet.dll.config
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Nop.Plugin.Payments.AuthorizeNet.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Nop.Plugin.Payments.AuthorizeNet.pdb
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Debug\Nop.Plugin.Payments.AuthorizeNet.csprojResolveAssemblyReference.cache
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Debug\Nop.Plugin.Payments.AuthorizeNet.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Debug\Nop.Plugin.Payments.AuthorizeNet.pdb

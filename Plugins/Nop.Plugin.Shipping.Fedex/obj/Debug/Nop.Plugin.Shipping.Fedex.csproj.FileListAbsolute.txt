@@ -1,0 +1,7 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Shipping.Fedex\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Shipping.Fedex\Nop.Plugin.Shipping.Fedex.dll.config
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Shipping.Fedex\Nop.Plugin.Shipping.Fedex.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\Shipping.Fedex\Nop.Plugin.Shipping.Fedex.pdb
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Shipping.Fedex\obj\Debug\Nop.Plugin.Shipping.Fedex.csprojResolveAssemblyReference.cache
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Shipping.Fedex\obj\Debug\Nop.Plugin.Shipping.Fedex.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.Shipping.Fedex\obj\Debug\Nop.Plugin.Shipping.Fedex.pdb

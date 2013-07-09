@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.PayMill.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@using (Html.BeginForm())
+{
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.publicKey):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model=>model.publicKey)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.privateKey):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.privateKey)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.apiUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model=>model.apiUrl)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="100%">
+                <button type="submit" name="save" value="save" class="t-button">
+                    @T("Admin.Common.Save")</button>
+            </td>
+        </tr>
+    </table>
+    
+}

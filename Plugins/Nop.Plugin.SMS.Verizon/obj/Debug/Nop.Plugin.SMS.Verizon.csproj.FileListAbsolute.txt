@@ -1,0 +1,5 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\SMS.Verizon\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.pdb
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.pdb

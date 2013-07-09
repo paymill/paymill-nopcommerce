@@ -1,0 +1,13 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\Nop.Data.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\EntityFramework.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\Nop.Core.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\System.Data.SqlServerCe.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\System.Data.SqlServerCe.Entity.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\Autofac.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\Autofac.Integration.Mvc.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\EntityFramework.xml
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\bin\Release\Autofac.xml
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\obj\Release\Nop.Data.csprojResolveAssemblyReference.cache
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Libraries\Nop.Data\obj\Release\Nop.Data.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Deployable\nop_3.00\bin\Nop.Data.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Deployable\nop_3.00\Administration\bin\Nop.Data.dll

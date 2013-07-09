@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "";
+}
+
+@model Nop.Plugin.Payments.PayMill.Models.PaymentInfoModel
+@using Nop.Web.Framework;
+<script type="text/javascript">
+    var PAYMILL_PUBLIC_KEY = '@ViewBag.publickey';
+    </script>
+    <script type="text/javascript" src="https://bridge.paymill.de/"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            function PaymillResponseHandler(error, result) {
+                if (error) {
+                    // Zeigt den Fehler überhalb des Formulars an
+                    $(".payment-errors").text('error.apierror');
+                } else {
+                    $(".payment-errors").text("");
+                    var form = $('input[type="submit"][name="nextstep"]').closest('form');
+
+                    // Token
+                    var token = result.token;
+
+                    // Token in das Formular einfügen damit es an den Server übergeben wird
+                    $("#paymenttoken").val(token);
+                        form.get(0).submit();
+                }
+                $('input[type="submit"][name="nextstep"]').removeAttr("disabled");
+            }
+
+            $('input[type="submit"][name="nextstep"]').click(function (event) {
+                // Absenden Button deaktivieren um weitere Klicks zu vermeiden
+                $('input[type="submit"][name="nextstep"]').attr("disabled", "disabled");
+                if (false == paymill.validateCardNumber($('.card-number').val())) {
+                    $(".payment-errors").text('@T("PaymentInfo.InvalidCard")');
+                    $('input[type="submit"][name="nextstep"]').removeAttr("disabled");
+                    return false;
+                }
+                //debugging//alert($('.card-expiry-month').val() + $('#ExpireYear').val() + $('.card-number').val());
+
+                if (false == paymill.validateExpiry($('#ExpireMonth').val(), $('#ExpireYear').val())) {
+                    $(".payment-errors").text('@T("PaymentInfo.ExpiredCard")');
+                    $('input[type="submit"][name="nextstep"]').removeAttr("disabled");
+                    return false;
+                }
+
+                paymill.createToken({
+                    number: $('.card-number').val(),
+                    exp_month: $('#ExpireMonth').val(),
+                    exp_year: $('#ExpireYear').val(),
+                    cvc: $('.card-cvc').val(),
+                    cardholdername: $('.card-holdername').val(),
+                    amount_int: $('.amount').val(),
+                    currency: $('.currency').val()
+                }, PaymillResponseHandler);
+
+                return false;
+            });
+        });
+
+    </script>
+
+@Html.NopLabelFor(model => model.CreditCardTypes, false)
+@Html.DropDownListFor(model => model.CreditCardType, Model.CreditCardTypes)
+@Html.NopLabelFor(model => model.CardholderName, false)
+@Html.TextBoxFor(model => model.CardholderName, new { autocomplete = "off", @class="card-holdername" })
+@Html.ValidationMessageFor(model => model.CardholderName)
+@Html.NopLabelFor(model => model.CardNumber, false)
+@Html.TextBoxFor(model => model.CardNumber, new { autocomplete = "off", maxlength = 22, @class="card-number" })
+@Html.ValidationMessageFor(model => model.CardNumber)
+@Html.NopLabelFor(model => model.ExpireMonth, false)
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+        @Html.DropDownListFor(model => model.ExpireMonth, Model.ExpireMonths, new { @class="card-expiry-month" })
+        /
+        @Html.DropDownListFor(model => model.ExpireYear, Model.ExpireYears, new { @class="card-expiry-year" })
+    </fieldset>
+</div>
+<input type="hidden" name="amount" class="amount" value="@ViewBag.amount" />
+<input type="hidden" name="currency" class="currency" value="@ViewBag.currency" />
+<input type="hidden" name="paymenttoken" id="paymenttoken" />
+<input type="hidden" name="nextstep" id="nextstephidden" value="nextstep" />
+@Html.NopLabelFor(model => model.CardCode, false)
+@Html.TextBoxFor(model => model.CardCode, new { style = "Width: 60px;", autocomplete = "off", maxlength = 4, @class="card-cvc" })
+@Html.ValidationMessageFor(model => model.CardCode)
+<div class="payment-errors"></div>

@@ -1,0 +1,4 @@
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.HasAllProducts\Description.txt
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Presentation\Nop.Web\Plugins\DiscountRules.HasAllProducts\Nop.Plugin.DiscountRules.HasAllProducts.dll
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.DiscountRules.HasAllProducts\obj\Release\Nop.Plugin.DiscountRules.HasAllProducts.csprojResolveAssemblyReference.cache
+C:\Users\jeffturner.TIMENET\Dropbox\Dev\Simonsell\nopcommerce3.0\Plugins\Nop.Plugin.DiscountRules.HasAllProducts\obj\Release\Nop.Plugin.DiscountRules.HasAllProducts.dll
